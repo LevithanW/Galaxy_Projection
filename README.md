@@ -25,7 +25,7 @@ This repository contains a collection of functions and interactive tools designe
 1. **Clone the repository**:
 
    ```bash
-   git clone (https://github.com/LevithanW/Galaxy_Projection.git)
+   git clone https://github.com/LevithanW/Galaxy_Projection.git
 
 ## Acknowledgments
 
