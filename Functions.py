@@ -265,7 +265,7 @@ def galaxy_projection(dim, asc, x, y, z, vx, vy, vz, INC, PA, dphi, gal_exp, dis
     # INC [°]: Inclination of the galaxy
     # PA [°]: Position angle of the galaxy
     # dphi [°]: Rotation offset
-    # gal_exp: Identifier for the galaxy
+    # gal_exp: ID of the galaxy
     # dist: Imposed Distance to the galaxy in Mpc
 
     # (PA) & (INC) from degrees to radians
