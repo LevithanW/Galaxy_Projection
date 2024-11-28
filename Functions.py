@@ -59,25 +59,6 @@ alpha_values = np.concatenate([np.ones(256 - a), np.zeros(a)])
 colors[:, 3] = alpha_values  # alpha channel to go from opaque to transparent
 custom_cmap = ListedColormap(colors)
 
-
-# Some relevant functions
-class MidpointNormalize(Normalize):
-    def __init__(self, vmin=None, vmax=None, midpoint=None, clip=False):
-        self.midpoint = midpoint
-        super().__init__(vmin, vmax, clip)
-
-    def __call__(self, value, clip=None):
-        # Normalize the value, with the midpoint being shifted to zero
-        value = np.asarray(value)
-        vmin, vmax, midpoint = self.vmin, self.vmax, self.midpoint
-        if not np.ma.is_masked(value):
-            value = np.ma.masked_invalid(value)
-
-        # Interpolating values around the midpoint
-        rescaled_value = np.interp(value, [vmin, midpoint, vmax], [0, 0.5, 1])
-        return rescaled_value
-
-
 # Function to calculate specific angular momentum (L_total) for particles within r_out
 def cal_specific_ang_mom(mass, pos, vel, r_out):
     r = LA.norm(pos, axis=1)  # Calculate the 3D distances for all particles
