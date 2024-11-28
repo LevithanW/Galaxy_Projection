@@ -152,7 +152,7 @@ def V_los(x, y, vx, vy, vz, phi, i):
     )  # Combine velocity contributions
     return v_los
 
-
+# Function to project the galaxy along the line of sight (requires the galaxy to be face-on to manipulate)
 def galactocentrictosky(rgal, phigal, incli, pa, centre, asc, nx, ny):
     # variables are set up as:
     # ; variable_name [physical unit] = meaning
